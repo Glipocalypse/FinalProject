@@ -55,7 +55,7 @@ $(document).ready(function(){
 		$("#menuScreen").hide();
 		$("#gameScreen").show();
 		$("#gameScreen").css("height",window.screen.height);
-		for (i = 0; i < $("#gameScreen").width()/10; i++){
+		for (i = 0; i < $("#gameScreen").width()/20; i++){
 			$("<div/>", {'class': "mineSquare"}).css("width", "20px").css("height", "20px").appendTo("#gameScreen").css("left", Math.floor((Math.random()*($("#gameScreen").width()-20)))).css("top", -Math.floor((Math.random()*($("#gameScreen").height())))-25);
 		}
 		gameNotOver = true;
