@@ -1,0 +1,3 @@
+GitHub Repo: https://github.com/Glipocalypse/Project-4
+
+PhoneGap Build page: https://build.phonegap.com/apps/1162983/builds

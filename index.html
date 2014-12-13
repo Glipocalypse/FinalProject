@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<title>Minefall</title>
+	<link href="FrankenyFinalProject.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="jquery-1.8.3.min.js"></script>
+    <script src="ui/jquery.ui.core.js"></script>
+    <script src="ui/jquery.ui.widget.js"></script>
+    <script src="ui/jquery.ui.mouse.js"></script>
+    <script src="ui/jquery.ui.draggable.js"></script>
+    <script src="jquery-collision.min.js"></script>
+    <script src="jquery-ui-draggable-collision.min.js"></script>
+	<script type="text/javascript" src="FrankenyFinalProject.js"></script>
+	
+
+</head>
+
+<body>
+<div id="menuScreen">
+	<h1>Minefall</h1>
+	<button type="button" id="btnStartGame">Start Game</button>
+	<button type="button" id="btnInstructions">Instructions</button>
+</div>
+<div id="instructionsScreen">
+	<button type="button" id="btnBack">Back</button>
+	<h1>Instructions</h1>
+	<p>Red squares (mines) will fall from the top of the screen. Avoid the mines to stay alive by dragging your player character (blue square) around with your finger! The number of mines you have dodged is displayed at the top of the screen during the game. The mines will speed up after every 100 mines dodged. See how long you can survive!</p>
+	<a href="https://build.phonegap.com/apps/1162983/builds">PhoneGap Build Link</a>
+	<a href="https://github.com/Glipocalypse/Project-4">GitHub Repository Link</a>
+</div>
+<div id="gameScreen">
+<h1 id="mineCount">0</h1>
+<div id="playerSquare"></div>
+</div>
+<div id="gameOverScreen">
+<h2 id="gameSummary">Filler Text</h2>
+<button type="button" id="btnTryAgain">Try Again?</button>
+<button type="button" id="btnMainMenu">Main Menu</button>
+</div>
+	
+</body>
+
+</html>
