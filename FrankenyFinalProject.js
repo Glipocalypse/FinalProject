@@ -69,7 +69,10 @@ $(document).ready(function(){
 	$("#btnCamera").bind("click", takePicture);
 	$("#btnAvatar").bind("touchstart", displayAvatarSelect);
 	$("#btnConfirmAvatar").bind("touchstart", confirmAvatar);
-	$("#usePicture").bind("touchstart", function(){$("#usePicture").trigger("click");});
+	$("#usePicture").bind("touchstart", function(){
+		$("#usePicture").trigger("click");
+		showPictureButton();
+	});
 	$("#usePicture").bind("click", showPictureButton);
 	function showPictureButton(){
 		if ($("#usePicture").is(":checked")){
@@ -83,11 +86,11 @@ $(document).ready(function(){
 		}
 	}
 	function muteUnmuteMusic(){
-		if (musicPlayer.muted){
-			musicPlayer.muted = false;
+		if (musicPlayer.paused){
+			musicPlayer.play();
 			$("#btnMute").text("Mute Music");
 		}else{
-			musicPlayer.muted = true;
+			musicPlayer.pause();
 			$("#btnMute").text("Unmute Music");
 		}
 	}
