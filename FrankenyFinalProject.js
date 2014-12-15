@@ -7,8 +7,11 @@
     Modification History: None
     Last Modified: N/A
 */
-$(document).ready(function(){
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
 	console.log(navigator.camera);
+}
+$(document).ready(function(){
 	document.addEventListener("touchstart", touchHandler, true);
     document.addEventListener("touchmove", touchHandler, true);
     document.addEventListener("touchend", touchHandler, true);
