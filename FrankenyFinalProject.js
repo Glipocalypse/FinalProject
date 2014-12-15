@@ -67,7 +67,11 @@ $(document).ready(function(){
 	$("#btnAvatar").bind("click", displayAvatarSelect);
 	$("#btnConfirmAvatar").bind("click", confirmAvatar);
 	$("#btnCamera").bind("click", takePicture);
-	$("#usePicture").bind("click", function(){
+	$("#btnAvatar").bind("touchstart", displayAvatarSelect);
+	$("#btnConfirmAvatar").bind("touchstart", confirmAvatar);
+	$("#btnCamera").bind("touchstart", takePicture);
+	$("#usePicture").bind("click", showPictureButton);
+	function showPictureButton(){
 		if ($("#usePicture").is(":checked")){
 			if (window.localStorage.getItem("playerAvatar") != null)
 				$("#playerAvatar").attr("src",window.localStorage.getItem("playerAvatar"));
@@ -77,7 +81,7 @@ $(document).ready(function(){
 			$("#playerAvatar").attr("src","");
 			$("#btnCamera").hide();
 		}
-	});
+	}
 	function muteUnmuteMusic(){
 		if (musicPlayer.muted){
 			musicPlayer.muted = false;
