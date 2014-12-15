@@ -30,6 +30,7 @@ $(document).ready(function(){
 		window.localStorage.setItem("usePicture", "false");
 	if (window.localStorage.getItem("playerAvatar") != null)
 		$("#playerAvatar").attr("src",window.localStorage.getItem("playerAvatar"));
+	
 	$("#playerSquare").css("background-color",window.localStorage.getItem("playerColor")).css("opacity",window.localStorage.getItem("playerOpacity"));
 	var playerColor = "#FFFFFF";
 	var numMinesDodged = 0;
@@ -83,10 +84,11 @@ $(document).ready(function(){
 		if ($("#usePicture").is(":checked")){
 			if (window.localStorage.getItem("playerAvatar") != null)
 				$("#playerAvatar").attr("src",window.localStorage.getItem("playerAvatar"));
+			$("#playerAvatar").show();
 			$("#btnCamera").show();
 		}
 		else{
-			$("#playerAvatar").attr("src","");
+			$("#playerAvatar").hide();
 			$("#btnCamera").hide();
 		}
 	}
@@ -131,6 +133,10 @@ $(document).ready(function(){
 		setTimeout(timeout_trigger, 10);
 		$("#playerSquare").css("left",($("#gameScreen").width()-$("#playerSquare").width())/2).css("top",window.screen.height/4);
 		$("#playerSquare").draggable({ obstacle: ".mineSquare", containment: "#gameScreen" , scroll: false} );
+		if (window.localStorage.getItem("usePicture") == "true")
+			$("#playerAvatar").show();
+		else
+			$("#playerAvatar").hide();
 	}
 	function displayInstructions(){
 		$("#menuScreen").hide();
@@ -149,13 +155,16 @@ $(document).ready(function(){
 		$("#avatarPreview").prepend($("#playerSquare"));
 		$("#avatarPreview").css("height","60px");
 		$("#playerSquare").css("left",($("#avatarScreen").width()-$("#playerSquare").width())/2);
+		$("#playerSquare").show();
 		$("#colorPicker").minicolors("value",window.localStorage.getItem("playerColor"));
 		if(window.localStorage.getItem("usePicture") == "true"){
 			if(!$("#usePicture").is(":checked")){
 				$("#usePicture").trigger("click");
 			}
-		}else if($("#usePicture").is(":checked"))
+		}else{
+			if($("#usePicture").is(":checked"))
 			$("#usePicture").trigger("click");
+		}
 				
 		if ($("#usePicture").is(":checked"))
 			$("#btnCamera").show();
@@ -227,6 +236,10 @@ $(document).ready(function(){
 		$("#playerSquare").css("left",($("#gameScreen").width()-$("#playerSquare").width())/2).css("top",window.screen.height/4);
 		$("#playerSquare").draggable('enable');
 		$("#playerSquare").show();
+		if (window.localStorage.getItem("usePicture") == "true")
+			$("#playerAvatar").show();
+		else
+			$("#playerAvatar").hide();
 		numMinesDodged = 0;
 		setTimeout(timeout_trigger, 10);
 	}
