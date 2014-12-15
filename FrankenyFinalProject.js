@@ -71,6 +71,7 @@ $(document).ready(function(){
 	$("#btnAvatar").bind("click", displayAvatarSelect);
 	$("#btnConfirmAvatar").bind("click", confirmAvatar);
 	$("#btnCamera").bind("click", takePicture);
+	$("#btnCamera").bind("touchstart", takePicture);
 	$("#btnAvatar").bind("touchstart", displayAvatarSelect);
 	$("#btnConfirmAvatar").bind("touchstart", confirmAvatar);
 	$("#usePicture").bind("touchstart", function(){
