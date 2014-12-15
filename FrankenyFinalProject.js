@@ -156,7 +156,7 @@ $(document).ready(function(){
 		$("#avatarScreen").prepend($("#btnBack"));
 		$("#avatarPreview").prepend($("#playerSquare"));
 		$("#avatarPreview").css("height","60px");
-		$("#playerSquare").css("left",($("#avatarScreen").width()-$("#playerSquare").width())/2);
+		$("#playerSquare").css("left",($("#avatarScreen").width()-$("#playerSquare").width())/2).css("top",$("#avatarPreview").css("top"));
 		$("#playerSquare").show();
 		$("#colorPicker").minicolors("value",window.localStorage.getItem("playerColor"));
 		if(window.localStorage.getItem("usePicture") == "true"){
