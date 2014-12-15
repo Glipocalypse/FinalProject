@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	<title>Minefall</title>
 	<link href="FrankenyFinalProject.css" rel="stylesheet" type="text/css">
+	
+	<link href="jquery.minicolors.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script src="jquery-1.8.3.min.js"></script>
     <script src="ui/jquery.ui.core.js"></script>
@@ -16,16 +18,20 @@
     <script src="ui/jquery.ui.draggable.js"></script>
     <script src="jquery-collision.min.js"></script>
     <script src="jquery-ui-draggable-collision.min.js"></script>
+	<script src="jquery.minicolors.min.js"></script>
 	<script type="text/javascript" src="FrankenyFinalProject.js"></script>
 	
 
 </head>
 
 <body>
+<audio autoplay id="musicPlayer" src="music/Suaveness!.mp3" type="audio/mpeg">
+</audio>
 <div id="menuScreen">
 	<h1>Minefall</h1>
 	<button type="button" id="btnStartGame">Start Game</button>
 	<button type="button" id="btnInstructions">Instructions</button>
+	<button type="button" id="btnOptions">Options</button>
 </div>
 <div id="instructionsScreen">
 	<button type="button" id="btnBack">Back</button>
@@ -36,12 +42,30 @@
 </div>
 <div id="gameScreen">
 <h1 id="mineCount">0</h1>
-<div id="playerSquare"></div>
+<div id="playerSquare">
+	<img id="playerAvatar" src="">
+</div>
 </div>
 <div id="gameOverScreen">
 <h2 id="gameSummary">Filler Text</h2>
 <button type="button" id="btnTryAgain">Try Again?</button>
 <button type="button" id="btnMainMenu">Main Menu</button>
+</div>
+<div id="optionsScreen">
+<button type="button" id="btnMute">Mute Music</button>
+<button type="button" id="btnAvatar">Change Avatar</button>
+</div>
+<div id="avatarScreen">
+<h1>Avatar Preview:</h1>
+<div id="avatarPreview"></div>
+<div id="colorPickerWrapper">
+	<div id="colorPicker"></div>
+</div>
+<div id="checkboxWrapper">
+<label><input type="checkbox" id="usePicture">Use Picture</label>
+</div>
+<button type="button" id="btnCamera">Take Picture</button>
+<button type="button" id="btnConfirmAvatar">Confirm Avatar</button>
 </div>
 </body>
 </html>

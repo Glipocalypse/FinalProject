@@ -11,6 +11,11 @@
     </description>
 
 	<gap:platform name="ios"/>
+	<feature name="Camera">
+		<param name="ios-package" value="CDVCamera"/>
+	</feature>
+	<gap:plugin name="org.apache.cordova.camera" version="0.3.2"/>
+	<gap:plugin name="org.apache.cordova.media" version="0.2.13"/>
 	<preference name="DisallowOverscroll" value="true"/>
 	<preference name="Orientation" value="portrait"/>
 </widget>

@@ -4,12 +4,7 @@ body{
 	padding: 0;
 	overflow: hidden;
 }
-#menuScreen button{
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 50px;
-}
-#gameOverScreen button{
+button:not(#btnBack){
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 50px;
@@ -40,5 +35,13 @@ h2{
 	font-size: 20px;
 }
 p{
+	text-align: center;
+}
+#avatarScreen > div{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+label{
 	text-align: center;
 }
