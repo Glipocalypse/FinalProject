@@ -7,9 +7,13 @@
     Modification History: None
     Last Modified: N/A
 */
+var pictureSource;
+var destinationType;
+
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	console.log(navigator.camera);
+	pictureSource=navigator.camera.PictureSourceType;
+	destinationType=navigator.camera.DestinationType;
 }
 $(document).ready(function(){
 	document.addEventListener("touchstart", touchHandler, true);
@@ -230,6 +234,7 @@ $(document).ready(function(){
 		musicPlayer.load();
 	}
 	function takePicture(){
+		alert("Takin' a picture!");
 		navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
 			destinationType: Camera.DestinationType.DATA_URL
 		});
