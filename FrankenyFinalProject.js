@@ -86,10 +86,12 @@ $(document).ready(function(){
 				$("#playerAvatar").attr("src",window.localStorage.getItem("playerAvatar"));
 			$("#playerAvatar").show();
 			$("#btnCamera").show();
+			$("#colorPickerWrapper").hide();
 		}
 		else{
 			$("#playerAvatar").hide();
 			$("#btnCamera").hide();
+			$("#colorPickerWrapper").show();
 		}
 	}
 	function muteUnmuteMusic(){
@@ -166,10 +168,14 @@ $(document).ready(function(){
 			$("#usePicture").trigger("click");
 		}
 				
-		if ($("#usePicture").is(":checked"))
+		if ($("#usePicture").is(":checked")){
 			$("#btnCamera").show();
-		else
+			$("#colorPickerWrapper").hide();
+		}
+		else{
 			$("#btnCamera").hide();
+			$("#colorPickerWrapper").show();
+		}
 	}
 	function confirmAvatar(){
 		$("#avatarScreen").hide();
