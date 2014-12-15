@@ -8,10 +8,7 @@
     Last Modified: N/A
 */
 $(document).ready(function(){
-	document.addEventListener("deviceready", onDeviceReady, false);
-	function onDeviceReady() {
-		console.log(navigator.camera);
-	}
+	console.log(navigator.camera);
 	document.addEventListener("touchstart", touchHandler, true);
     document.addEventListener("touchmove", touchHandler, true);
     document.addEventListener("touchend", touchHandler, true);
