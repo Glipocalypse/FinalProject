@@ -126,6 +126,7 @@ $(document).ready(function(){
 		$("#btnStartGame").unbind("click", startGame);
 		$("#btnStartGame").bind("touchstart",restart);
 		$("#btnStartGame").bind("click", restart);
+		$("body").css("background-color","#FFFFFF");
 		$("#menuScreen").hide();
 		$("#gameScreen").show();
 		$("#gameScreen").css("height",window.screen.height);
@@ -150,6 +151,7 @@ $(document).ready(function(){
 		$("#menuScreen").hide();
 		$("#optionsScreen").prepend($("#btnBack"));
 		$("#optionsScreen").show();
+		$("#btnMute").css("margin-top", "50px");
 	}
 	function displayAvatarSelect(){
 		$("#optionsScreen").hide();
@@ -227,6 +229,8 @@ $(document).ready(function(){
 		}
 	}
 	function displayGameOverScreen(){
+	
+		$("body").css("background-color","#000000");
 		$("#gameScreen").hide();
 		$("#gameOverScreen").show();
 		if (numMinesDodged > window.localStorage.getItem("highScore"))
