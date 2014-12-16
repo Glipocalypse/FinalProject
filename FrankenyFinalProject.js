@@ -16,6 +16,7 @@ function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
 }
 $(document).ready(function(){
+	$("#menuPic").css("width", $("#menuScreen").width()).css("height", "auto");
 	document.addEventListener("touchstart", touchHandler, true);
     document.addEventListener("touchmove", touchHandler, true);
     document.addEventListener("touchend", touchHandler, true);
