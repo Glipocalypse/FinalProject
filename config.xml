@@ -31,7 +31,8 @@
 	<gap:plugin name="org.apache.cordova.camera" version="0.3.2"/>
 	<gap:plugin name="org.apache.cordova.media" version="0.2.13"/>
 	<preference name="DisallowOverscroll" value="true"/>
-	<preference name="Orientation" value="portrait"/>
-	<preference name="fullscreen" value="true"/>
+	<preference name="orientation" value="portrait" />
+	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.1.0" />
+	
 	
 </widget>
