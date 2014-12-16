@@ -195,6 +195,7 @@ $(document).ready(function(){
 	function goBack(){
 		if ($("#avatarScreen").is(":visible")){
 			$("#avatarScreen").hide();
+			$("#gameScreen").append($("#playerSquare"));
 			displayOptions();
 		}else{		
 			$("#menuScreen").show();
